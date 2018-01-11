@@ -1,0 +1,293 @@
+extends adminProfile
+block content
+  html.js.flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.websqldatabase.indexeddb.hashchange.history.draganddrop.websockets.rgba.hsla.multiplebgs.backgroundsize.borderimage.borderradius.boxshadow.textshadow.opacity.cssanimations.csscolumns.cssgradients.cssreflections.csstransforms.csstransforms3d.csstransitions.fontface.generatedcontent.video.audio.localstorage.sessionstorage.webworkers.applicationcache.svg.inlinesvg.smil.svgclippaths.gr__(style='')
+          head
+            style(type='text/css').
+                .gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+              link(type='text/css', rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700')
+              style(type='text/css').
+                .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+              style(type='text/css').
+                @media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
+              style(type='text/css').
+                .gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+              // Title
+              title | Profile
+              |  
+            body.page-header-fixed.pace-done(data-gr-c-s-loaded='true')
+              .pace.pace-inactive
+                .pace-progress(data-progress-text='100%', data-progress='99', style='transform: translate3d(100%, 0px, 0px);')
+                  .pace-progress-inner
+                .pace-activity
+              |         
+              .overlay
+              |         
+              |         
+              |         
+              .menu-wrap
+                nav.profile-menu
+                  .profile
+                    img(src='/images/bitkey.png', width='60', alt='#{name}')
+                    span #{name}
+                  |                 
+                  .profile-menu-list
+                |             
+                button#close-button.close-button Close Menu
+              |         
+              |         
+              main.page-content.content-wrap
+                .navbar
+                  .navbar-inner
+                    .sidebar-pusher
+                      a.waves-effect.waves-button.waves-classic.push-sidebar(href='javascript:void(0);')
+                        i.fa.fa-bars
+                    |                     
+                    .logo-box
+                      a.logo-text(href='/')
+                        span CoinSense
+                    // Logo Box
+                    .search-button
+                      a.waves-effect.waves-button.waves-classic.show-search(href='javascript:void(0);')
+                        i.fa.fa-search
+                    |                     
+                    .topmenu-outer
+                      .top-menu
+                        ul.nav.navbar-nav.navbar-left
+                          li
+                            a.waves-effect.waves-button.waves-classic.sidebar-toggle(href='javascript:void(0);')
+                              i.fa.fa-bars
+                          |                                 
+                          li
+                        |                             
+                        ul.nav.navbar-nav.navbar-right
+                          li.dropdown
+                            //- |a.dropdown-toggle.waves-effect.waves-button.waves-classic(href='#', data-toggle='dropdown')
+                              span.user-name
+                                | #{name}
+                                i.fa.fa-angle-down
+                              |                                         
+                              img.img-circle.avatar(src='/images/bitkey.png', width='40', height='40', alt='')
+                            |                                     
+                            ul.dropdown-menu.dropdown-list(role='menu')
+                              li(role='presentation')
+                                a(href='profile.html')
+                                  i.fa.fa-user
+                                  | Profile
+                          |                                 
+                          li
+                            a.log-out.waves-effect.waves-button.waves-classic(href='/logout')
+                              span
+                                i.fa.fa-sign-out.m-r-xs
+                                | Log out
+                        // Nav
+                      // Top Menu
+                // Navbar
+                .page-sidebar.sidebar
+                  .slimScrollDiv(style='position: relative; overflow: hidden; width: auto; height: 100%;')
+                    .page-sidebar-inner.slimscroll(style='overflow: hidden; width: auto; height: 100%;')
+                      .sidebar-header
+                        .sidebar-profile
+                          a#profile-menu-link(href='javascript:void(0);')
+                            .sidebar-profile-image
+                              img.img-circle.img-responsive(src='/images/mining.png', alt='')
+                            |                                 
+                            .sidebar-profile-details
+                              span
+                                | #{name} 
+                                br
+                                small Username
+                      |                     
+                      ul.menu.accordion-menu
+                        li
+                          a.waves-effect.waves-button(href='/dashboard')
+                            span.menu-icon.glyphicon.glyphicon-home
+                            p Dashboard
+                        |                         
+                        li.active
+                          a.waves-effect.waves-button(href='/profile')
+                            span.menu-icon.glyphicon.glyphicon-user
+                            p Profile
+                        |                         
+                        li.droplink
+                    .slimScrollBar(style='background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-radius: 0px; z-index: 99; right: 0px; height: 300px;')
+                    .slimScrollRail(style='width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 0px;')
+                  // Page Sidebar Inner
+                // Page Sidebar
+                .page-inner(style='min-height:1080px !important')
+                  .profile-cover
+                    .row
+                      .col-md-3.profile-image
+                        .profile-image-container
+                        img(src='/images/mining.png', alt='')
+                      |                         
+                  |                 
+                  #main-wrapper
+                    .row
+                      .col-md-3.user-profile
+                        h4.text-center Hello
+                        |                             
+                        h3.text-center.lead #{name}
+                        |                             
+                        hr
+                        |                             
+                        ul.list-unstyled.text-center
+                          li
+                            p
+                              
+                              form(method='POST' action='/updateProfile')
+                                div.form-group
+                                  label(for ='city') Change City: #{city}
+                                  input#city.form-control(type='text',  placeholder='Current City' name='city')
+                                div.form-group
+                                  label(for='website') Change Website: #{website}
+                                  input#name.form-control(type='text', placeholder='Your Website' name='website')
+                                  a(href='#')  
+                                |
+                                button.btn.btn-success(type='submit') Submit Changes                                
+                        |                               
+                        //- form(method='POST', enctype='multipart/form-data')
+                        //- div.form-group
+                        //-   input(type='file', name='upl')
+                        //-   button.btn.btn-primary.btn-block(type='submit', name='uploadimage', value='Upload Image')
+                        //-     i.fa.fa-plus.m-r-xs
+                        //-     | Upload Profile Image                 
+                      |                         
+                      .col-md-6.m-t-lg
+                        .panel.panel-dark
+                            .post
+                              h3.bottommargin_40 Cryptocurrency Calculator:
+                              include price                                     
+                              
+                        |                             
+                        .profile-timeline
+                          ul.list-unstyled
+                            li.timeline-item
+                              .panel.panel-dark
+                                .panel-body
+                                form(method='POST' action="/updateBTC")
+                                  div.form-group
+                                    img.img-circle(src='/images/btcAV.png', width='30', height='30', alt='')
+                                    input#btc.form-control(type='number', placeholder='' name='btc')
+                                    a(href='#')  
+                                  |
+                                  button.btn.btn-success(type='submit' name="trade" value="Buy") Buy
+                                  button.btn.btn-danger(type='submit' name="trade" value="Sell") Sell 
+                                  
+                            |                                     
+                            li.timeline-item
+                              .panel.panel-dark
+                                .panel-body
+                                form(method='POST' action="/updateETH")
+                                  div.form-group
+                                    img.img-circle(src='/images/ethAV.jpg', width='30', height='30', alt='')
+                                    input#eth.form-control(type='number', placeholder='' name='eth')
+                                    a(href='#')  
+                                  |
+                                  button.btn.btn-success(type='submit' name="trade" value="Buy") Buy
+                                  button.btn.btn-danger(type='submit' name="trade" value="Sell") Sell 
+                            |                                     
+                            li.timeline-item
+                              .panel.panel-dark
+                                .panel-body
+                                form(method='POST' action="/updateLIT")
+                                  div.form-group
+                                    img.img-circle(src='/images/ltcAv.jpg', width='30', height='30', alt='')
+                                    input#lit.form-control(type='number', placeholder='' name='lit')
+                                    a(href='#')  
+                                  |
+                                  button.btn.btn-success(type='submit' name="trade" value="Buy") Buy
+                                  button.btn.btn-danger(type='submit' name="trade" value="Sell") Sell 
+                      |                         
+                      .col-md-3.m-t-lg
+                        .panel.panel-dark
+                          .panel-heading
+                            .panel-title Trending Currencies
+                          |                                 
+                          .panel-body
+                            .team
+                              .team-member
+                                img(src='/images/btcAV.png', alt='')
+                              .team-member
+                                img(src='/images/ltcAv.jpg', alt='')
+                              .team-member
+                                img(src='/images/ethAV.jpg', alt='')
+                              .team-member
+                                img(src='/images/merAV.jpg', alt='')
+                              .team-member
+                                img(src='/images/dashAV.jpg', alt='')
+                        |
+                        .panel.panel-dark
+                          .panel-heading
+                            .panel-title Placeholder
+                          |                                 
+                          .panel-body
+                            p
+                              | Placeholder
+                        |                             
+                        .col-lg-4.col-md-6
+                        .panel.panel-dark
+                          .panel-heading
+                            h4.panel-title #{name}'s Portfolio
+                            .panel-control
+                              a.panel-reload(href='javascript:void(0);', data-toggle='tooltip', data-placement='top', title='', data-original-title='Reload')
+                                i.icon-reload
+                          .panel-body
+                            .slimScrollDiv(style='position: relative; overflow: hidden; width: auto; height: 20%;')
+                              .inbox-widget.slimscroll(style='overflow: hidden; width: auto; height: 30%;')
+                                  .inbox-item
+                                    .inbox-item-img
+                                      img.img-circle(src='/images/btcAV.png', alt='')
+                                    p.live-title Your Bitcoins
+                                    p.inbox-item-date #{btc} BTC
+                                  .inbox-item
+                                    .inbox-item-img
+                                      img.img-circle(src='/images/ethAV.jpg', alt='')
+                                    p.live-title Your Ethereum
+                                    p.inbox-item-date #{eth} ETH
+                                  .inbox-item
+                                    .inbox-item-img
+                                      img.img-circle(src='/images/ltcAV.jpg', alt='')
+                                    p.live-title Your Litecoins
+                                    p.inbox-item-date #{lit} LTC
+                              .slimScrollBar(style='background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-radius: 0px; z-index: 99; right: 0px; height: 298.923px;')
+                              .slimScrollRail(style='width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 0px;')
+                            |                 
+                  .page-footer
+                // Page Inner
+              // Page Content
+              
+              |         
+              .cd-overlay
+              // Javascripts
+              script(src='assets/plugins/jquery/jquery-2.1.4.min.js')
+              |         
+              script(src='assets/plugins/jquery-ui/jquery-ui.min.js')
+              |         
+              script(src='assets/plugins/pace-master/pace.min.js')
+              |         
+              script(src='assets/plugins/jquery-blockui/jquery.blockui.js')
+              |         
+              script(src='assets/plugins/bootstrap/js/bootstrap.min.js')
+              |         
+              script(src='assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js')
+              |         
+              script(src='assets/plugins/switchery/switchery.min.js')
+              |         
+              script(src='assets/plugins/uniform/jquery.uniform.min.js')
+              |         
+              script(src='assets/plugins/offcanvasmenueffects/js/classie.js')
+              |         
+              script(src='assets/plugins/offcanvasmenueffects/js/main.js')
+              |         
+              script(src='assets/plugins/waves/waves.min.js')
+              |         
+              script(src='assets/plugins/3d-bold-navigation/js/main.js')
+              |         
+              script(src='assets/js/modern.min.js')
+              |         
+              |         
+              script(src='assets/js/pages/profile.js')
+            span.gr__tooltip
+              span.gr__tooltip-content
+              i.gr__tooltip-logo
+              span.gr__triangle

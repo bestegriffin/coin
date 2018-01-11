@@ -1,0 +1,21 @@
+extends layout
+block content
+  .main.container
+    .row
+      .col-md-8.col-md-offset-2
+        |
+        h2.display-4.m-b-2 Contact Us
+        form.m-t-md
+          .form-group
+            .row
+              .col-sm-6
+                input.form-control.input-lg.contact-name(type='text', placeholder='Name')
+              .col-sm-6
+                input.form-control.input-lg(type='email', placeholder='Email')
+          .form-group
+            input.form-control.input-lg(type='text', placeholder='Subject')
+          .form-group
+            textarea.form-control(rows='4=6', placeholder='Message')
+          button.btn.btn-info.btn-lg(type='submit') Send Message
+
+
