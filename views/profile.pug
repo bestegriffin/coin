@@ -143,7 +143,7 @@ block content
                                   input#name.form-control(type='text', placeholder='Your Website' name='website')
                                   a(href='#')  
                                 |
-                                button.btn.btn-success(type='submit') Submit Changes                                
+                                button.btn.btn-info(type='submit') Submit Changes                                
                         |                               
                         //- form(method='POST', enctype='multipart/form-data')
                         //- div.form-group
@@ -153,50 +153,57 @@ block content
                         //-     | Upload Profile Image                 
                       |                         
                       .col-md-6.m-t-lg
-                        .panel.panel-dark
+                        .panel
                             .post
                               h3.bottommargin_40 Cryptocurrency Calculator:
                               include price                                     
                               
-                        |                             
-                        .profile-timeline
-                          ul.list-unstyled
-                            li.timeline-item
-                              .panel.panel-dark
-                                .panel-body
-                                form(method='POST' action="/updateBTC")
-                                  div.form-group
-                                    img.img-circle(src='/images/btcAV.png', width='30', height='30', alt='')
-                                    input#btc.form-control(type='number', placeholder='' name='btc')
-                                    a(href='#')  
-                                  |
-                                  button.btn.btn-success(type='submit' name="trade" value="Buy") Buy
-                                  button.btn.btn-danger(type='submit' name="trade" value="Sell") Sell 
-                                  
-                            |                                     
-                            li.timeline-item
-                              .panel.panel-dark
-                                .panel-body
-                                form(method='POST' action="/updateETH")
-                                  div.form-group
-                                    img.img-circle(src='/images/ethAV.jpg', width='30', height='30', alt='')
-                                    input#eth.form-control(type='number', placeholder='' name='eth')
-                                    a(href='#')  
-                                  |
-                                  button.btn.btn-success(type='submit' name="trade" value="Buy") Buy
-                                  button.btn.btn-danger(type='submit' name="trade" value="Sell") Sell 
-                            |                                     
-                            li.timeline-item
-                              .panel.panel-dark
-                                .panel-body
-                                form(method='POST' action="/updateLIT")
-                                  div.form-group
-                                    img.img-circle(src='/images/ltcAv.jpg', width='30', height='30', alt='')
-                                    input#lit.form-control(type='number', placeholder='' name='lit')
-                                    a(href='#')  
-                                  |
-                                  button.btn.btn-success(type='submit' name="trade" value="Buy") Buy
-                                  button.btn.btn-danger(type='submit' name="trade" value="Sell") Sell 
+                        |
+                        .col-md-4                       
+                          .profile-timeline
+                            ul.list-unstyled
+                              li.timeline-item
+                                .panel
+                                  .panel-body
+                                  form(method='POST' action="/updateBTC")
+                                    div.form-group
+                                      img.img-circle.center(src='/images/btcAV.png', width='32.5%', height='',style={'margin-bottom':'10px'})
+                                      input#btc.form-control(type='number', placeholder='',step="0.001", min="0", name='btc')
+                                      a(href='#')  
+                                    |
+                                    button.btn.btn-success(type='submit' name="trade" value="Buy" style = 'width:50%') Buy
+                                    button.btn.btn-danger(type='submit' name="trade" value="Sell" style = 'width:50%') Sell 
+                                    
+                              | 
+                        .col-md-4
+                          .profile-timeline
+                            ul.list-unstyled                                    
+                              li.timeline-item
+                                .panel
+                                  .panel-body
+                                  form(method='POST' action="/updateETH")
+                                    div.form-group
+                                      img.img-circle.center(src='/images/ethAV.jpg', width='32.5%', height='',style={'margin-bottom':'10px'})
+                                      input#eth.form-control(type='number', placeholder='',step="0.001",min="0", name='eth')
+                                      a(href='#')  
+                                    |
+                                    button.btn.btn-success(type='submit' name="trade" value="Buy" style = 'width:50%', 'height:100%') Buy
+                                    button.btn.btn-danger(type='submit' name="trade" value="Sell" style = 'width:50%', 'height:100%') Sell 
+                              | 
+                        .col-md-4
+                          .profile-timeline
+                            ul.list-unstyled                                    
+                              li.timeline-item
+                                .panel
+                                  .panel-body
+                                  form(method='POST' action="/updateLIT")
+                                    div.form-group
+                                      img.img-circle.center(src='/images/ltcAv.jpg', width='32.5%', height='',style={'margin-bottom':'10px'})
+                                      input#lit.form-control(type='number', placeholder='',step="0.001", min="0", name='lit')
+                                      a(href='#')  
+                                    |
+                                    button.btn.btn-success(type='submit' name="trade" value="Buy" style = 'width:50%') Buy
+                                    button.btn.btn-danger(type='submit' name="trade" value="Sell" style = 'width:50%') Sell 
                       |                         
                       .col-md-3.m-t-lg
                         .panel.panel-dark
@@ -215,40 +222,29 @@ block content
                                 img(src='/images/merAV.jpg', alt='')
                               .team-member
                                 img(src='/images/dashAV.jpg', alt='')
-                        |
-                        .panel.panel-dark
-                          .panel-heading
-                            .panel-title Placeholder
-                          |                                 
-                          .panel-body
-                            p
-                              | Placeholder
-                        |                             
+                        |                            
                         .col-lg-4.col-md-6
                         .panel.panel-dark
                           .panel-heading
-                            h4.panel-title #{name}'s Portfolio
-                            .panel-control
-                              a.panel-reload(href='javascript:void(0);', data-toggle='tooltip', data-placement='top', title='', data-original-title='Reload')
-                                i.icon-reload
+                          h5(style={'text-align':'center'}).panel-title.center #{name}'s Portfolio
                           .panel-body
-                            .slimScrollDiv(style='position: relative; overflow: hidden; width: auto; height: 20%;')
-                              .inbox-widget.slimscroll(style='overflow: hidden; width: auto; height: 30%;')
+                            .slimScrollDiv(style='position: relative; overflow: hidden; width: auto; height: 40%;')
+                              .inbox-widget.slimscroll(style='overflow: hidden; width: auto; height: 100%;')
                                   .inbox-item
                                     .inbox-item-img
                                       img.img-circle(src='/images/btcAV.png', alt='')
-                                    p.live-title Your Bitcoins
-                                    p.inbox-item-date #{btc} BTC
+                                      p.live-title Your Bitcoins
+                                    p(style={'margin-top':'5%'}).inbox-item-date #{btc} BTC
                                   .inbox-item
                                     .inbox-item-img
                                       img.img-circle(src='/images/ethAV.jpg', alt='')
-                                    p.live-title Your Ethereum
-                                    p.inbox-item-date #{eth} ETH
+                                      p.live-title Your Ethereum
+                                    p(style={'margin-top':'5%'}).inbox-item-date #{eth} ETH
                                   .inbox-item
                                     .inbox-item-img
-                                      img.img-circle(src='/images/ltcAV.jpg', alt='')
-                                    p.live-title Your Litecoins
-                                    p.inbox-item-date #{lit} LTC
+                                      img.img-circle(src='/images/ltcAv.jpg', alt='')
+                                      p.live-title Your Litecoins
+                                    p(style={'margin-top':'5%'}).inbox-item-date #{lit} LTC
                               .slimScrollBar(style='background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-radius: 0px; z-index: 99; right: 0px; height: 298.923px;')
                               .slimScrollRail(style='width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 0px;')
                             |                 
