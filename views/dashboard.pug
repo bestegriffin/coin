@@ -6,7 +6,7 @@ block content
     .menu-wrap
       nav.profile-menu
         .profile
-          img(src='assets/images/profile-menu-image.png', width='60', alt='#{name}')
+          img(src='/images/bitkey.png', width='60', alt='#{name}')
           span #{name}
         |
       |             
@@ -113,24 +113,38 @@ block content
       // Page Sidebar
       .page-inner
         .page-title
-          h3 Dashboard
+          h3 Crypto Market
           |                     
           .page-breadcrumb
             ol.breadcrumb
               li
-                a(href='index.html') Home
+                a(href='/') Home
               |                             
-              li.active Dashboard
+              li.active The Marketplace
         |                 
         #main-wrapper
           .row
+            .col-lg-3.col-md-6
+                .panel.info-box
+                  .panel-body
+                    .info-box-stats
+                      |
+                      span.info-box-title  #{name}'s Dashboard  
+                      |                                        
+                    |                                     
+                    .info-box-icon
+                      i.icon-favorite
+                    |                                     
+                    .info-box-progress
+                      .progress.progress-xs.progress-squared.bs-n
+                        .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 100%')
             .col-lg-3.col-md-6
               .panel.info-box.panel-dark
                 .panel-body
                   .info-box-stats
                     p
                       | $
-                      span#currentBTC(data-btc="currentBTC")&attributes({'btc':{btc}}) 
+                      span#currentBTC(data-cry={btc})&attributes({'btc':{btc}}) 
                     |                                         
                     span.info-box-title Bitcoin Current Price 
                   |                                     
@@ -147,7 +161,7 @@ block content
                   .info-box-stats
                     p
                       | $
-                      span#currentETH(data-btc="currentETH")&attributes({'eth':{eth}})
+                      span#currentETH(data-cry={eth})&attributes({'eth':{eth}})
                     |                                         
                     span.info-box-title Ethereum Current Price
                   |                                     
@@ -164,7 +178,7 @@ block content
                   .info-box-stats
                     p
                       | $
-                      span#currentLIT(data-btc="currentLIT")&attributes({'lit':{lit}}).
+                      span#currentLIT(data-cry={lit})&attributes({'lit':{lit}}).
                     |                                         
                     span.info-box-title Litecoin Current Price 
                   |                                     
@@ -174,21 +188,7 @@ block content
                   .info-box-progress
                     .progress.progress-xs.progress-squared.bs-n
                       .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 100%')
-            |                         
-            .col-lg-3.col-md-6
-              .panel.info-box
-                .panel-body
-                  .info-box-stats
-                    |
-                    span.info-box-title  #{name}'s Dashboard  
-                    |                                        
-                  |                                     
-                  .info-box-icon
-                    i.icon-favorite
-                  |                                     
-                  .info-box-progress
-                    .progress.progress-xs.progress-squared.bs-n
-                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 100%')
+            |
           // Row
           .row
             .col-lg-12.col-md-12
@@ -209,17 +209,17 @@ block content
                       |                                             
                       .panel-body
                         ul.list-unstyled
-                          li
+                          li#btccoin
                             | Bitcoin
                             .text-success.pull-right
                               | 8%
                               i.fa.fa-level-down
                           |                                                     
-                          li
+                          li#ethcoin
                             | Etherum
                             .text-success.pull-right
                               | 33%
-                              i.fa.fa-level-up
+                              i#ethcoinlevel.fa.fa-level-up
                           |                                                     
                           li
                             | Litecoin
@@ -227,29 +227,29 @@ block content
                               | 16%
                               i.fa.fa-level-up
                           |                                                     
-                          li
+                          li#ripplecoin
                             | Ripple
                             .text-danger.pull-right
                               | 13%
-                              i.fa.fa-level-down
+                              i#ripplelevel.fa.fa-level-down
                           |                                                     
-                          li
+                          li#monerocoin
                             | Monero
                             .text-danger.pull-right
                               | 7%
-                              i.fa.fa-level-down
+                              i#monerolevel.fa.fa-level-down
                           |                                                     
-                          li
+                          li#dashcoin
                             | Dash
                             .text-success.pull-right
                               | 4%
-                              i.fa.fa-level-up
+                              i#dashlevel.fa.fa-level-up
                           |                                                     
-                          li
+                          li#dodgecoin
                             | DodgeCoin
                             .text-success.pull-right
                               | 3%
-                              i.fa.fa-level-up
+                              i#dodgelevel.fa.fa-level-up
             #flotchart2
             |                         
             //- .col-lg-3.col-md-6
@@ -465,18 +465,18 @@ block content
                           .inbox-item-img
                             img.img-circle(src='/images/btcAV.png', alt='')
                           p.live-title Your Bitcoins
-                          p.inbox-item-date #{btc} BTC | USD
+                            p#calcBTC.inbox-item-date #{btc} BTC | 
                           p.inbox-item-date 
                         .inbox-item
                           .inbox-item-img
                             img.img-circle(src='/images/ethAV.jpg', alt='')
                           p.live-title Your Ethereum
-                          p.f-s-18.inbox-item-date #{eth} ETH | USD
+                            p#calcETH.f-s-18.inbox-item-date #{eth} ETH | 
                         .inbox-item
                           .inbox-item-img
                             img.img-circle(src='/images/ltcAv.jpg', alt='')
                           p.live-title Your Litecoins
-                          p.inbox-item-date #{lit} LIT | USD
+                          p#calcLIT.inbox-item-date #{lit} LTC | 
                     .slimScrollBar(style='background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-radius: 0px; z-index: 99; right: 0px; height: 298.923px;')
                     .slimScrollRail(style='width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 0px;')
 
@@ -485,35 +485,39 @@ block content
             .col-lg-12.col-md-6
               .col-lg-6
                 .panel.twitter-box
-                  .panel-body
+                  .panel-body#twitterbox
                     .live-tile(data-mode='flip', data-speed='750', data-delay='3000')
                       span.tile-title.pull-right News
                       |                                         
                       //- i.fa.fa-twitter
                       |                                         
-                      div
-                        h2.no-m *All* crypto communities, ethereum included, should heed these words of warning...
-                        span.tile-date 13 January, 2018
+                      div#article1
+                        a(href="")
+                          h2.no-m *All* crypto communities, ethereum included, should heed these words of warning...
+                          span.tile-date 13 January, 2018
                       |                                         
-                      div
-                        h2.no-m Those who didn’t buy $XRP on the dip will regret this when Japan wakes up! 
-                        span.tile-date 13 January, 2018
+                      div#article2
+                        a(href="")
+                          h2.no-m Those who didn’t buy $XRP on the dip will regret this when Japan wakes up! 
+                          span.tile-date 13 January, 2018
                 |
               .col-lg-6                            
                 .panel.facebook-box
-                  .panel-body
+                  .panel-body#facebookbox
                     .live-tile(data-mode='carousel', data-direction='horizontal', data-speed='750', data-delay='4500')
-                      span.tile-title.pull-right Facebook
+                      span.tile-title.pull-right Community Pages
                       |                                         
                       //- i.fa.fa-facebook
                       |                                         
-                      div
-                        h2.no-m Check out our actual TOP10 CryptoCurrency price index! ...
-                        span.tile-date @cryptocurrency
+                      div#facebox1
+                        a(href="https://www.facebook.com/cryptocurrency/")
+                          h2.no-m Check out our actual TOP10 CryptoCurrency price index! ...
+                          span.tile-date @cryptocurrency
                       |                                         
-                      div
-                        h2.no-m There are a lot of scams out there. Do your ICO research!...
-                        span.tile-date @cryptocurrencyupdates
+                      div#facebox2
+                        a(href="https://www.facebook.com/cryptocurrencyupdates/")
+                          h2.no-m There are a lot of scams out there. Do your ICO research!...
+                          span.tile-date @cryptocurrencyupdates
               |                         
         // Main Wrapper
         .page-footer

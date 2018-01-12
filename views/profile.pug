@@ -124,24 +124,25 @@ block content
                   #main-wrapper
                     .row
                       .col-md-3.user-profile
-                        h4.text-center Hello
+                        h4.text-center  #{name}
                         |                             
-                        h3.text-center.lead #{name}
-                        |                             
+                        h3.text-center.lead
+                        |     
+                        p.text-center.title #{city}  
+                        p.text-center.title #{website}                      
                         hr
                         |                             
                         ul.list-unstyled.text-center
                           li
-                            p
+                            p Update Your Information
                               
                               form(method='POST' action='/updateProfile')
                                 div.form-group
-                                  label(for ='city') Change City: #{city}
+                                  label(for ='city') Change City: 
                                   input#city.form-control(type='text',  placeholder='Current City' name='city')
                                 div.form-group
-                                  label(for='website') Change Website: #{website}
+                                  label(for='website') Change Website: 
                                   input#name.form-control(type='text', placeholder='Your Website' name='website')
-                                  a(href='#')  
                                 |
                                 button.btn.btn-info(type='submit') Submit Changes                                
                         |                               
@@ -243,13 +244,8 @@ block content
                                   .inbox-item
                                     .inbox-item-img
                                       img.img-circle(src='/images/ltcAv.jpg', alt='')
-<<<<<<< HEAD
                                       p.live-title Your Litecoins
                                     p(style={'margin-top':'5%'}).inbox-item-date #{lit} LTC
-=======
-                                    p.live-title Your Litecoins
-                                    p.inbox-item-date #{lit} LTC
->>>>>>> 98a03217e5bad96a6d7e1e5ad171287e502a73f6
                               .slimScrollBar(style='background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.3; display: none; border-radius: 0px; z-index: 99; right: 0px; height: 298.923px;')
                               .slimScrollRail(style='width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 0px;')
                             |                 
