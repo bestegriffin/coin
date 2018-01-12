@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 8000
 var app = express();
 mongoose.Promise = require('bluebird');
 
@@ -19,11 +19,11 @@ app.use(function(req, res, next) {
     next();
 });
 
-// // mongodb connection
+// mongodb connection
 // development db
 // mongoose.connect("mongodb://localhost:27017/coinSense", { useMongoClient: true });
 
-// // deployment db
+// deployment db
 mongoose.connect("mongodb://heroku_q941fpr3:o956fhe81vo4v82dpfupnc92js@ds251277.mlab.com:51277/heroku_q941fpr3");
 
 var db = mongoose.connection;
